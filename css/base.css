@@ -1,27 +1,8 @@
-@font-face {
-    font-family: 'mozTT';
-    src: url('../fonts/moztt_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'mozTT';
-    src: url('../fonts/moztt_light-webfont.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'mozTT';
-    src: url('../fonts/moztt_medium-webfont.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
 html, body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font: normal 10px "mozTT", sans-serif;
+  font: normal 10px Arial, sans-serif;
   background: #fff;
 }
 
@@ -90,26 +71,11 @@ header.show-install h1 {
     max-width: 100%;
 }
 
-#image-presenter,
-#connection-display,
-#geolocation-display,
-#battery-display,
-#ambient-light-display,
-#proximity-display,
-#device-orientation-display {
-    display: none;
-    margin-bottom: 10px;
-}
-
 #main button {
     display: inline-block;
     width: 49%;
     vertical-align: top;
     margin: 0 auto 2rem;
-}
-
-#image-to-share {
-    display: none;
 }
 
 footer {
