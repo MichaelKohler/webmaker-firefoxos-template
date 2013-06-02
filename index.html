@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+    Exchange the line above for this to enable offline support
+    <html manifest="manifest.appcache">
+
+    Please make your homework before doing this:
+        http://www.alistapart.com/articles/application-cache-is-a-douchebag/
+        http://appcachefacts.info
+    
+    This might be necessary to set up on your server, to make sure 
+    files are updated when the appcache file itself is:
+        https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/.htaccess
+ -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/headers.css">
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="css/toolbars.css">
+    <title>Firefox OS Boilerplate App</title>
+</head>
+
+<body>
+
+    <section role="region">
+        <header>
+            <!-- Icon that will indicate whether you are online or offline - enabled if you are using offline/appcache (see above) -->
+            <div id="online-status" title="Online"></div>
+            <menu type="toolbar">
+                <button id="install"><span class="icon icon-add">add</span></button>
+            </menu>
+            <h1>
+                Firefox OS Boilerplate App
+            </h1>
+        </header>
+    </section>
+
+
+    <div id="main">
+
+        <p id="installation-instructions">Press the + button in the top right corner to install this app.</p>
+
+        <h2>WebActivities</h2>
+
+        <button id="pick-image">Pick image</button>
+        <div id="image-presenter"></div>
+
+        <button id="pick-anything">Pick anything</button>
+
+        <button id="record">Take picture</button>
+
+        <button id="dial">Dial number</button>
+
+        <button id="send-sms">Send SMS</button>
+
+        <button id="add-contact">Add contact</button>
+
+        <button id="share">Share URL</button>
+
+        <button id="share-image">Share Image</button>
+        <img id="image-to-share" src="images/logo64.png" alt="">
+
+        <button id="view-url">View URL</button>
+
+        <button id="compose-email">Compose mail</button>
+
+        <button id="save-bookmark">Save bookmark</button>
+
+
+        <h2>WebAPIs</h2>
+
+        <button id="add-notification">Add notification</button>
+
+        <button id="lock-orientation">Orientation lock</button>
+
+        <button id="vibrate">Vibrate 2 sec</button>
+
+        <button id="add-alarm">Add alarm</button>
+
+        <button id="check-connection">Check connection</button>
+        <div id="connection-display">Connection values should show up here</div>
+
+        <button id="check-battery">Check battery</button>
+        <div id="battery-display">Battery values should show up here</div>
+
+        <button id="geolocation">Geolocation</button>
+        <div id="geolocation-display">Geolocation coords should show up here</div>
+
+        <button id="ambient-light">Ambient light</button>
+        <div id="ambient-light-display">Ambient light should show up here</div>        
+
+        <button id="proximity">Proximity</button>
+        <div id="proximity-display">Proximity should show up here</div>        
+
+        <button id="device-orientation">Device orientation</button>
+        <div id="device-orientation-display">Device orientation should show up here</div>
+
+        <h3>Privileged APIs</h3>
+
+        <button id="cross-domain-xhr">Cross-domain XHR</button>
+        <div id="cross-domain-xhr-display"></div>
+
+        <button id="device-storage-pictures">deviceStorage - pictures</button>
+        <div id="device-storage-pictures-display"></div>
+    </div>
+
+    <footer>
+        <div role="toolbar">
+            <ul>
+                <li><button id="reload" class="update">Update</button></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/webapp.js"></script>
+    <script type="text/javascript" src="js/offline.js"></script>
+
+    <!-- 
+        Loosely based on fxosstub: https://github.com/Jaxo/fxosstub
+    -->
+
+</body>
+</html>
