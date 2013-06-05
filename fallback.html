@@ -1,22 +1,39 @@
 <!DOCTYPE html>
+<!-- the <html> element is wrapped around everything within the page. -->
 <html>
+<!-- the <head> element is "executed" before the content is loaded. We load
+     the styling files here -->
 <head>
+    <!-- set the charset to utf-8 -->
     <meta charset="utf-8">
+
+    <!-- set the viewport (what you see) to the devices' width, so we use the
+         whole available space -->
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+
+    <!-- load all the styling files. Those are written in CSS and describe how
+         every element on the page has to look. -->
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+
+    <!-- the <title> element specifies the title of your application -->
     <title>Your app title comes here</title>
 </head>
 
+<!-- everything between the <body> element is shown to the user -->
 <body>
 
     <header>
+        <!-- The heading to be shown in offline mode -->
         <h1>Your app title comes here</h1>
     </header>
 
+    <!-- here comes the main content (displayed below the title) -->
     <div id="main">
         <p>You are currently offline. You came here through the manifest.appcache file.</p>
     </div>
 
+    <!-- at the bottom of a page, you sometimes see a copyright notice or something similar. This is done with a <footer>
+         element. In this case, we have a second toolbar with the "update" button and a "save bookmark" button. -->
     <footer>
         <ul>
             <li><button id="save-bookmark">Save bookmark</button></li>
@@ -24,6 +41,7 @@
         </ul>
     </footer>
 
+    <!-- now we load all the JavaScript files -->
     <script type="text/javascript" src="js/base.js"></script>
     <script type="text/javascript" src="js/webapp.js"></script>
 

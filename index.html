@@ -1,38 +1,58 @@
 <!DOCTYPE html>
+<!-- the <html> element is wrapped around everything within the page. -->
 <html manifest="manifest.appcache">
+<!-- the <head> element is "executed" before the content is loaded. We load
+     the styling files here -->
 <head>
+    <!-- set the charset to utf-8 -->
     <meta charset="utf-8">
+
+    <!-- set the viewport (what you see) to the devices' width, so we use the
+         whole available space -->
     <meta name="viewport" content="width=device-width">
+
+    <!-- load all the styling files. Those are written in CSS and describe how
+         every element on the page has to look. -->
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/headers.css">
     <link rel="stylesheet" type="text/css" href="css/buttons.css">
     <link rel="stylesheet" type="text/css" href="css/toolbars.css">
+
+    <!-- the <title> element specifies the title of your application -->
     <title>Your app title comes here</title>
 </head>
 
+<!-- everything between the <body> element is shown to the user -->
 <body>
 
+    <!-- a <section> can be used to separate different parts of the interface. This section
+         is mostly the toolbar at the top of the application. -->
     <section role="region">
         <header>
-            <!-- Icon that will indicate whether you are online or offline - enabled if you are using offline/appcache (see above) -->
+            <!-- Icon that will indicate whether you are online or offline - enabled if you are using offline/appcache -->
             <div id="online-status" title="Online"></div>
             <menu type="toolbar">
                 <button id="install"><span class="icon icon-add">add</span></button>
             </menu>
+            <!-- the <h1> element is a first degree heading. This is displayed at the top, so it is really
+                 important. It it wasn't as important it would probaby be <h2> or <h3>. -->
             <h1>Your app title comes here</h1>
         </header>
     </section>
 
-
+    <!-- we want some content, right? this <div> is where all your content goes (this is where the button is currently) -->
     <div id="main">
-
+        <!-- the <p> element specifies a paragraph -->
         <p id="installation-instructions">Press the + button in the top right corner to install this app.</p>
 
+        <!-- do you see the smaller title above the button? This title is not as important, so we create a <h2> element -->
         <h2>Test title</h2>
-
+        <!-- finally, we add a button. We assign an ID to it because we need to link an action to it (see the js/webapp.js file) -->
         <button id="some_button">Some button</button>
     </div>
 
+    <!-- at the bottom of a page, you sometimes see a copyright notice or something similar. This is done with a <footer>
+         element. In this case, we have a second toolbar with the "update" button. -->
     <footer>
         <div role="toolbar">
             <ul>
@@ -41,9 +61,10 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="js/base.js"></script>
-    <script type="text/javascript" src="js/webapp.js"></script>
-    <script type="text/javascript" src="js/offline.js"></script>
+    <!-- now we load all the JavaScript files -->
+    <script type="text/javascript" src="js/base.js"></script> <!-- base.js specifies the actions to do for installing the app -->
+    <script type="text/javascript" src="js/webapp.js"></script> <!-- webapp.js does all the magic which should be done inside the app -->
+    <script type="text/javascript" src="js/offline.js"></script> <!-- offline.js handles the case, when we are offline -->
 
     <!-- Based on the Firefox OS Boilerplate App: https://github.com/robnyman/Firefox-OS-Boilerplate-App -->
 
